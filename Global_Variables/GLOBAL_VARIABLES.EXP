@@ -1,0 +1,29 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @GLOBAL_VARIABLE_LIST := 'Global_Variables' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+VAR_GLOBAL
+    hoz: INT;
+    ver: INT;
+	MAPA: ARRAY[0..20, 0..15] OF BOOL;
+	Mapa_Punkty: ARRAY[0..20, 0..15] OF BOOL;
+	Wolne_Prawo: BOOL;
+	Wolne_Lewo: BOOL;
+	Wolne_Dol: BOOL;
+	Wolne_Gora: BOOL;
+	Otwarte: BOOL := TRUE;
+	Kierunek: INT := 1;
+ B_Prawo : BOOL := TRUE;
+   B_Lewo  : BOOL;
+   B_Dol   : BOOL;
+   B_Gora  : BOOL;
+
+END_VAR
+(* @OBJECT_END := 'Global_Variables' *)
+(* @CONNECTIONS := Global_Variables
+FILENAME : ''
+FILETIME : 0
+EXPORT : 0
+NUMOFCONNECTIONS : 0
+*)
