@@ -1,0 +1,294 @@
+
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+FUNCTION_BLOCK MAPA
+VAR
+    i: INT;
+    j: INT;
+    Init_Done: BOOL := FALSE;
+
+END_VAR
+(* @END_DECLARATION := '0' *)
+IF NOT Init_Done THEN
+
+    (* ======================= *)
+    (* 1. RYSOWANIE ŒCIAN      *)
+    (* ======================= *)
+
+    FOR i := 0 TO 20 DO
+        Mapa[i, 0] := TRUE;
+        Mapa[i, 15] := TRUE;
+    END_FOR
+    
+    FOR j := 0 TO 15 DO
+        Mapa[0, j] := TRUE;
+        MAPA[20, j] := TRUE;
+    END_FOR
+
+    Mapa[0, 0] := FALSE;
+    Mapa[1, 0] := FALSE;
+    Mapa[0, 1] := FALSE;
+    Mapa[2, 0] := FALSE;
+    Mapa[0, 2] := FALSE;
+    Mapa[3, 0] := FALSE;
+    Mapa[0, 3] := FALSE;
+    Mapa[0, 4] := FALSE;
+    Mapa[0, 5] := FALSE;
+    Mapa[0, 6] := FALSE;
+    Mapa[0, 7] := FALSE;
+    Mapa[0, 8] := FALSE;
+
+    Mapa[1, 4] := FALSE;
+    Mapa[2, 4] := FALSE;
+    Mapa[2, 3] := FALSE;
+    Mapa[2, 2] := FALSE;
+    Mapa[3, 2] := FALSE;
+    
+    Mapa[1, 3] := TRUE;
+    Mapa[1, 2] := TRUE;
+    Mapa[1, 1] := TRUE;
+    Mapa[2, 1] := TRUE;
+
+    Mapa[1, 5] := TRUE;
+    Mapa[1, 6] := TRUE;
+    Mapa[1, 7] := TRUE;
+    Mapa[2, 7] := TRUE;
+    Mapa[3, 5] := TRUE;
+    Mapa[4, 5] := TRUE;
+    Mapa[3, 3] := TRUE;
+    Mapa[4, 3] := TRUE;
+    Mapa[4, 7] := TRUE;
+    Mapa[4, 8] := TRUE;
+
+    Mapa[6, 1] := TRUE;
+    Mapa[7, 1] := TRUE;
+    Mapa[8, 1] := TRUE;
+    Mapa[9, 1] := TRUE;
+    Mapa[10, 1] := TRUE;
+    Mapa[11, 1] := TRUE;
+    Mapa[12, 1] := TRUE;
+
+    Mapa[6, 3] := TRUE;
+    Mapa[7, 3] := TRUE;
+    Mapa[11, 3] := TRUE;
+    Mapa[12, 3] := TRUE;
+    Mapa[6, 4] := TRUE;
+    Mapa[12, 4] := TRUE;
+
+    Mapa[6, 5] := TRUE;
+    Mapa[7, 5] := TRUE;
+    Mapa[8, 5] := TRUE;
+    Mapa[9, 5] := TRUE;
+    Mapa[10, 5] := TRUE;
+    Mapa[11, 5] := TRUE;
+    Mapa[12, 5] := TRUE;
+
+    Mapa[6, 7] := TRUE;
+    Mapa[7, 7] := TRUE;
+    Mapa[8, 7] := TRUE;
+    Mapa[9, 7] := TRUE;
+    Mapa[10, 7] := TRUE;
+    Mapa[11, 7] := TRUE;
+    Mapa[12, 7] := TRUE;
+
+    Mapa[14, 0] := TRUE;
+    Mapa[14, 1] := TRUE;
+    Mapa[14, 3] := TRUE;
+    Mapa[14, 5] := TRUE;
+    Mapa[15, 5] := TRUE;
+    Mapa[14, 7] := TRUE;
+    Mapa[14, 8] := TRUE;
+    Mapa[15, 3] := TRUE;
+    Mapa[16, 1] := TRUE;
+    Mapa[16, 7] := TRUE;
+
+    Mapa[17, 1] := TRUE;
+    Mapa[17, 2] := TRUE;
+    Mapa[17, 3] := TRUE;
+    Mapa[17, 5] := TRUE;
+    Mapa[17, 6] := TRUE;
+    Mapa[17, 7] := TRUE;
+    
+    Mapa[4, 1] := TRUE;
+
+    Mapa[5, 0] := FALSE;
+    Mapa[6, 0] := FALSE;
+    Mapa[7, 0] := FALSE;
+    Mapa[8, 0] := FALSE;
+    Mapa[9, 0] := FALSE;
+    Mapa[10, 0] := FALSE;
+    Mapa[11, 0] := FALSE;
+    Mapa[12, 0] := FALSE;
+    Mapa[13, 0] := FALSE;
+    Mapa[15, 0] := FALSE;
+    Mapa[16, 0] := FALSE;
+    Mapa[17, 0] := FALSE;
+    Mapa[18, 0] := FALSE;
+
+
+    Mapa[1, 9] := TRUE;
+    Mapa[2, 9] := TRUE;
+    Mapa[3, 9] := TRUE;
+    Mapa[4, 9] := TRUE;
+    Mapa[5, 9] := TRUE;
+    Mapa[6, 9] := TRUE;
+    Mapa[7, 9] := TRUE;
+    Mapa[8, 9] := TRUE;
+    Mapa[9, 9] := TRUE;
+    Mapa[10, 9] := TRUE;
+    Mapa[11, 9] := TRUE;
+    Mapa[12, 9] := TRUE;
+    Mapa[13, 9] := TRUE;
+    Mapa[14, 9] := TRUE;
+    Mapa[15, 9] := TRUE;
+    Mapa[16, 9] := TRUE;
+    Mapa[17, 9] := TRUE;
+    Mapa[18, 9] := TRUE;
+    Mapa[19, 9] := TRUE;
+
+    Mapa[19, 1] := TRUE;
+    Mapa[19, 2] := TRUE;
+    Mapa[19, 3] := TRUE;
+    Mapa[19, 4] := TRUE;
+    Mapa[19, 5] := TRUE;
+    Mapa[19, 6] := TRUE;
+    Mapa[19, 7] := TRUE;
+    Mapa[19, 8] := TRUE;
+
+    (* ======================= *)
+    (* 2. RYSOWANIE PUNKTÓW    *)
+    (* ======================= *)
+    
+	Mapa_Punkty[0, 2] := TRUE;
+	Mapa_Punkty[0, 3] := TRUE;
+	Mapa_Punkty[0, 4] := TRUE;
+	Mapa_Punkty[0, 5] := TRUE;
+	Mapa_Punkty[0, 6] := TRUE;
+	Mapa_Punkty[0, 7] := TRUE;
+	Mapa_Punkty[0, 8] := TRUE;
+	Mapa_Punkty[1, 8] := TRUE;
+	Mapa_Punkty[2, 8] := TRUE;
+	Mapa_Punkty[3, 8] := TRUE;
+	Mapa_Punkty[3, 7] := TRUE;
+	Mapa_Punkty[3, 6] := TRUE;
+	Mapa_Punkty[4, 6] := TRUE;
+	Mapa_Punkty[5, 6] := TRUE;
+	Mapa_Punkty[6, 6] := TRUE;
+	Mapa_Punkty[7, 6] := TRUE;
+	Mapa_Punkty[8, 6] := TRUE;
+	Mapa_Punkty[9, 6] := TRUE;
+	Mapa_Punkty[10, 6] := TRUE;
+	Mapa_Punkty[11,6] := TRUE;
+	Mapa_Punkty[12, 6] := TRUE;
+	Mapa_Punkty[13, 6] := TRUE;
+	Mapa_Punkty[14, 6] := TRUE;
+	Mapa_Punkty[15, 6] := TRUE;
+	Mapa_Punkty[16, 6] := TRUE;
+	
+	Mapa_Punkty[6, 8] := TRUE;
+	Mapa_Punkty[7, 8] := TRUE;
+	Mapa_Punkty[8, 8] := TRUE;
+	Mapa_Punkty[9, 8] := TRUE;
+	Mapa_Punkty[10, 8] := TRUE;
+	Mapa_Punkty[11, 8] := TRUE;
+	Mapa_Punkty[12, 8] := TRUE;
+	Mapa_Punkty[13, 8] := TRUE;
+	Mapa_Punkty[5, 8] := TRUE;
+	
+	Mapa_Punkty[6, 0] := TRUE;
+	Mapa_Punkty[7, 0] := TRUE;
+	Mapa_Punkty[8, 0] := TRUE;
+	Mapa_Punkty[9, 0] := TRUE;
+	Mapa_Punkty[10, 0] := TRUE;
+	Mapa_Punkty[11, 0] := TRUE;
+	Mapa_Punkty[12, 0] := TRUE;
+	Mapa_Punkty[13, 0] := TRUE;
+	Mapa_Punkty[5, 0] := TRUE;
+	
+	Mapa_Punkty[18, 0] := TRUE;
+	Mapa_Punkty[18, 1] := TRUE;
+	Mapa_Punkty[18, 2] := TRUE;
+	Mapa_Punkty[18, 3] := TRUE;
+	Mapa_Punkty[18, 4] := TRUE;
+	Mapa_Punkty[18, 5] := TRUE;
+	Mapa_Punkty[18, 6] := TRUE;
+	Mapa_Punkty[18, 7] := TRUE;
+	Mapa_Punkty[18, 8] := TRUE;
+	
+	Mapa_Punkty[2, 2] := TRUE;
+	Mapa_Punkty[3, 2] := TRUE;
+	Mapa_Punkty[4, 2] := TRUE;
+	Mapa_Punkty[5, 2] := TRUE;
+	Mapa_Punkty[6, 2] := TRUE;
+	Mapa_Punkty[7, 2] := TRUE;
+	Mapa_Punkty[8, 2] := TRUE;
+	Mapa_Punkty[9, 2] := TRUE;
+	Mapa_Punkty[10, 2] := TRUE;
+	Mapa_Punkty[11, 2] := TRUE;
+	Mapa_Punkty[12, 2] := TRUE;
+	Mapa_Punkty[13, 2] := TRUE;
+	Mapa_Punkty[14, 2] := TRUE;
+	Mapa_Punkty[15, 2] := TRUE;
+	Mapa_Punkty[16, 2] := TRUE;
+	
+	Mapa_Punkty[2, 3] := TRUE;
+	Mapa_Punkty[2, 4] := TRUE;
+	Mapa_Punkty[2, 5] := TRUE;
+	Mapa_Punkty[2, 6] := TRUE;
+	
+	Mapa_Punkty[5, 0] := TRUE;
+	Mapa_Punkty[5, 1] := TRUE;
+	Mapa_Punkty[5, 3] := TRUE;
+	Mapa_Punkty[5, 4] := TRUE;
+	Mapa_Punkty[5, 5] := TRUE;
+	Mapa_Punkty[5, 7] := TRUE;
+	Mapa_Punkty[5, 8] := TRUE;
+	Mapa_Punkty[3, 4] := TRUE;
+	Mapa_Punkty[4, 4] := TRUE;
+	
+	Mapa_Punkty[8, 3] := TRUE;
+	Mapa_Punkty[9, 3] := TRUE;
+	Mapa_Punkty[10, 3] := TRUE;
+	
+	Mapa_Punkty[7,4] := TRUE;
+	Mapa_Punkty[8,4] := TRUE;
+	Mapa_Punkty[9,4] := TRUE;
+	Mapa_Punkty[10,4] := TRUE;
+	Mapa_Punkty[11,4] := TRUE;
+	
+	Mapa_Punkty[13,1] := TRUE;
+	Mapa_Punkty[13,3] := TRUE;
+	Mapa_Punkty[13,4] := TRUE;
+	Mapa_Punkty[13,5] := TRUE;
+	Mapa_Punkty[13,7] := TRUE;
+	
+	Mapa_Punkty[13,4] := TRUE;
+	Mapa_Punkty[14,4] := TRUE;
+	Mapa_Punkty[15,4] := TRUE;
+	Mapa_Punkty[16,4] := TRUE;
+	Mapa_Punkty[17,4] := TRUE;
+	
+	Mapa_Punkty[16,3] := TRUE;
+	Mapa_Punkty[16,5] := TRUE;
+	
+	Mapa_Punkty[15,0] := TRUE;
+	Mapa_Punkty[16,0] := TRUE;
+	Mapa_Punkty[17,0] := TRUE;
+	Mapa_Punkty[15,8] := TRUE;
+	Mapa_Punkty[16,8] := TRUE;
+	Mapa_Punkty[17,8] := TRUE;
+	Mapa_Punkty[15,1] := TRUE;
+	Mapa_Punkty[1,4] := TRUE;
+	Mapa_Punkty[15,7] := TRUE;
+	
+	Mapa_Punkty[1,0] := TRUE;
+	Mapa_Punkty[2,0] := TRUE;
+	Mapa_Punkty[3,0] := TRUE;
+	Mapa_Punkty[3,1] := TRUE;
+
+    Init_Done := TRUE;
+
+END_IF
+END_FUNCTION_BLOCK

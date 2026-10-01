@@ -1,0 +1,39 @@
+
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+PROGRAM OBLICZ_KOLIZJE
+VAR
+END_VAR
+(* @END_DECLARATION := '0' *)
+Wolne_Prawo := FALSE;
+Wolne_Lewo := FALSE;
+Wolne_Gora := FALSE;
+Wolne_Dol := FALSE;
+
+IF hoz < 20 THEN
+    IF Mapa[hoz + 1, ver] = FALSE THEN
+        Wolne_Prawo := TRUE;
+    END_IF
+END_IF
+
+
+IF hoz > 0 THEN
+    IF Mapa[hoz - 1, ver] = FALSE THEN
+        Wolne_Lewo := TRUE;
+    END_IF
+END_IF
+
+IF ver < 15 THEN
+    IF Mapa[hoz, ver + 1] = FALSE THEN
+        Wolne_Dol := TRUE;
+    END_IF
+END_IF
+
+IF ver > 0 THEN
+    IF Mapa[hoz, ver - 1] = FALSE THEN
+        Wolne_Gora := TRUE;
+    END_IF
+END_IF
+END_PROGRAM
