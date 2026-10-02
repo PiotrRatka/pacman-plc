@@ -14,7 +14,7 @@ END_VAR
 IF NOT Init_Done THEN
 
     (* ======================= *)
-    (* 1. RYSOWANIE ŒCIAN      *)
+    (* 1. RYSOWANIE SCIAN      *)
     (* ======================= *)
 
     FOR i := 0 TO 20 DO
@@ -158,7 +158,7 @@ IF NOT Init_Done THEN
     Mapa[19, 8] := TRUE;
 
     (* ======================= *)
-    (* 2. RYSOWANIE PUNKTÓW    *)
+    (* 2. RYSOWANIE PUNKTÃ“W    *)
     (* ======================= *)
     
 	Mapa_Punkty[0, 2] := TRUE;
